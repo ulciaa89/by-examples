@@ -1,0 +1,44 @@
+;Lines that start with semicolon are comments
+;Semicolon must start the line (it must be the first character)
+;
+;Every rule have to be correct PCRE regular expression
+;Empty lines are ignored
+;
+;
+
+
+;
+;ignore all files in PROJECT/cache/ directory
+;
+/^cache\//
+
+
+;
+;ignore all files in PROJECT/nbproject/ directory
+;
+/^nbproject\//
+
+
+
+;
+;ignore all files in PROJECT/nbproject/ directory
+;
+/^test\//
+
+
+;
+;ignore file PROJECT/web/frontend_dev.php
+;
+/^web\/frontend_dev\.php$/
+
+
+;
+;ignore file PROJECT/symfony
+;
+/^symfony$/
+
+
+
+
+
+

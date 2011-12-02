@@ -1,0 +1,37 @@
+#
+#
+# Remember to copy ftp.ini and ftp_exclude.txt files to PROJECT/config/ 
+#
+#
+
+
+all:
+  ftp_plugin_exclude_filename:  %SF_CONFIG_DIR%/ftp_exclude.txt
+  ftp_plugin_ftp_server:        %SF_CONFIG_DIR%/ftp.ini
+  
+
+# Do not use:
+#
+#all:
+#  ftp_plugin:
+#    exclude:
+#      filename: %SF_CONFIG_DIR%/ftp_exclude.txt  
+#
+#
+# inside
+#     PROJECT/config/app.yml
+# or
+#     PROJECT/apps/APPLICATION/config/app.yml
+#
+# Use:
+#  
+#all:
+#  ftp_plugin_exclude_filename:  %SF_CONFIG_DIR%/ftp_exclude.txt
+#
+# instead.
+#
+
+      
+
+
+  

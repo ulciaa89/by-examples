@@ -1,0 +1,87 @@
+# sfFtp plugin #
+
+The `sfFtpPlugin` is a symfony plugin that provides deploy command over ftp connection.
+
+It is useful for hosting symfony projects on shared hosts that do not offer ssh/rsync capabilities.
+
+## Installation ##
+
+  * Install the plugin (via a package)
+
+        symfony plugin:install sfFtpPlugin
+        
+  * Configuration
+  
+    * Define ftp connection parameters in PROJECT/config/ftp.ini
+    
+	        \[production\]
+	          host=your.ftp.server.example.net
+	          port=22
+	          user=account
+	          password=sEcreTPAssWorD
+	          dir=/
+
+    * Define exclusions in PROJECT/config/ftp_exclude.txt
+
+	        /^cache\//
+	        /^nbproject\//
+	        /^test\//
+	        /^web\/frontend_dev\.php$/
+	        /^symfony$/
+
+    Lines that start with semicolon are comments.
+    Semicolon must start the line (it have to be the first character).
+
+    Every rule have to be correct regular expressions.
+    Empty lines are ignored.
+
+    Example rule to exclude contents of a folder:
+
+	        /^cache\//
+
+    Example rule to exclude one file:
+
+	        /^web\/frontend_dev\.php$/
+
+
+## Usage ##
+
+  * Commands
+
+	        symfony ftp:deploy production
+	        symfony ftp:deploy production --go
+	        symfony ftp:deploy production --go --all-files
+
+    Without --go option the command will perform dry run. No files/directories
+    will be trensfered over ftp channel. You will be informed about files 
+    that should be updated.
+
+    The option --all-files forces complete update of a project.
+    All files (modified and unmodified) will be copied.
+    Excluded files (i.e. files that match rules from ftp_exclude.txt) are never copied.
+
+
+## Limitations ##
+
+  * If you rename a local file inside a project, the old one will not be erased on the server.
+    Thus the synchronization is not complete. We only update files and never delete them on
+    the server. 
+
+  
+## To do ##
+
+  * Classes for dir/filenames manipulation
+  * Unit tests for dir/filenames maniputation
+  * Ftp options: port, passive mode
+  * Logging
+  * Error handling: directory exists
+  * Check implementation of Net_FTP: http://pear.php.net/package/Net_FTP
+  * Check implementation of Zend_File_Transfer
+  * Remove old files from remote server? Do we need it?
+  * Validation of regular expressions stored in ftp_exclude.txt
+
+## Done ##
+
+  * -----done---  Exclusions
+  * -----done---  Check modification's date on remote server: ftp_mdtm() 
+

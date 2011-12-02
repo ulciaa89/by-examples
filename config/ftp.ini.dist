@@ -1,0 +1,6 @@
+[production]
+  host=ftp.example.net
+  port=22
+  user=student
+  password=???
+  dir=/folder/folder/folder

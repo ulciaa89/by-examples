@@ -1,0 +1,33 @@
+options:
+  collate: utf8_polish_ci
+  charset: utf8
+  type: InnoDB
+
+
+Article:
+  options:
+    orderBy: title
+    collate: utf8_polish_ci
+    charset: utf8
+    type: InnoDB
+  actAs:
+    Signable:
+    Sluggable:
+      unique: true
+      fields: [title]
+      canUpdate: false
+    Timestampable:
+  columns:
+    id:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+    title:
+      type: string(128)
+    lead:
+      type: string(4096)
+    contents:
+      type: string(4096)
+
+

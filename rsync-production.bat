@@ -1,0 +1,2 @@
+REM rsync --chmod=a+rwx,g-w,o-w  -azC --force --delete --progress --exclude-from=rsync_exclude.txt -e "ssh -p40022" ./ username@example.net:
+rsync --chmod=a+rwx,g-w,o-w  -azC --force --delete --progress --exclude-from=config/rsync_exclude.txt -e "ssh" ./ username@example.net:

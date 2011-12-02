@@ -1,0 +1,15 @@
+all:
+
+  message_with_layout_unavailable:
+
+    title:    Unavailable...
+    text:     Service temporalily unavailable...
+    filename: config/unavailable.php
+
+
+  message_with_layout_500:
+
+      text:     Error...
+      title:    Processing of your request triggered an error!
+      filename: config/error/error.html.php
+

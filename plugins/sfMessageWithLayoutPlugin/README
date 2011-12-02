@@ -1,0 +1,26 @@
+# sfMessageWithLayoutPlugin plugin #
+
+The `sfMessageWithLayoutPlugin` is a symfony plugin that generates config/unavailable.php and config/error/error.html.php files with layout.
+
+## Installation ##
+
+  * Only manual installation available
+
+## Usage ##
+
+  * Commands
+
+	        symfony message:generate
+	        symfony message:generate --page=500
+
+
+## Limitations ##
+
+  * You have to create config/error/ directory manually.
+  
+  
+## To do ##
+
+  * Automatic creation of config/error/ directory
+  * Tests
+

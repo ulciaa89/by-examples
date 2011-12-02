@@ -1,0 +1,64 @@
+;Lines that start with semicolon are comments
+;Semicolon must start the line (it have to be the first character)
+;
+;Every rule have to be correct regular expressions
+;Empty lines are ignored
+;
+;
+
+
+/^\.git\//
+/^00-extra\//
+/^cache\//
+
+; folder data/ zawiera pliki .lck
+; musi byæ uwzglêdniony je¶li stosujemy project:disable
+;
+;/^data\//
+;
+
+/^config\/doctrine\//
+/^doc\//
+/^lib\/vendor\//
+/^lib\/migration\//
+/^log\//
+/^nbproject\//
+/^test\//
+
+
+/^.gitignore$/
+/^ftp-deploy\.bat$/
+/^README$/
+/^run-phpcs\.bat$/
+/^run-phpdoc\.bat$/
+/^symfony$/
+/^symfony\.bat$/
+
+
+
+;Folder config/
+
+/^config\/databases\.yml\.dist$/
+/^config\/ftp\.ini$/
+/^config\/ftp\.ini\.dist$/
+/^config\/ftp_exclude\.txt$/
+/^config\/phpdoc\.ini$/
+/^config\/ProjectConfiguration\.class\.php$/
+/^config\/rsync_exclude\.txt$/
+
+
+;Folder web/
+
+/^web\/backend\.php$/
+/^web\/backend_dev\.php$/
+/^web\/frontend_dev\.php$/
+/^web\/index\.php$/
+/^web\/robots\.txt$/
+
+
+
+
+
+
+
+

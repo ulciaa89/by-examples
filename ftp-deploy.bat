@@ -1,0 +1,1 @@
+symfony ftp:deploy production --go

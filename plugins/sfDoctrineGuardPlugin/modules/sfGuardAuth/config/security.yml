@@ -1,0 +1,9 @@
+secure:
+  is_secure: false
+
+signin:
+  is_secure: false
+  require_ssl: true
+
+signout:
+  is_secure: false

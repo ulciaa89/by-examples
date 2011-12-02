@@ -1,0 +1,4 @@
+_generate_message:
+  url:   /generate/message/page.html
+  param: { module: message, action: show }
+
