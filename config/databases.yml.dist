@@ -1,0 +1,10 @@
+
+dev:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=localhost;dbname=byexamples;port=3306'
+      username: root
+      password: 
+      charset: utf8
+
